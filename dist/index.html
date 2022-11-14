@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Three JS</title>
+  <script type="module" crossorigin src="/assets/index.3d223458.js"></script>
+  <link rel="stylesheet" href="/assets/index.09b04767.css">
+</head>
+
+<body>
+  <canvas id="bg"></canvas>
+  <main>
+    <div class="sound">
+      <h1 class="sound__title">Пожалуйста, выберите звук</h1>
+      <div class="sound__options">
+        <button class="sound__btn" onclick="turnOnSound('classic')">Классический</button>
+        <button class="sound__btn" onclick="turnOnSound('jazz')">Джаз</button>
+      </div>
+
+      <audio id="jazz" src="sound/jazz.mp3" controls></audio>
+      <audio id="classic" src="sound/classic.mp4" controls loop></audio>
+    </div>
+  </main>
+  
+  <script>
+    function turnOnSound(type) {
+      const jazz = document.getElementById('jazz');
+      const classic = document.getElementById('classic');
+      if (type == 'classic') {
+        jazz.classList.remove('active');
+        classic.classList.add('active');
+        jazz.pause();
+        classic.play();
+      } else{
+        classic.classList.remove('active');
+        jazz.classList.add('active');
+        classic.pause();
+        jazz.play();
+      }
+    }
+  </script>
+</body>
+
+</html>
