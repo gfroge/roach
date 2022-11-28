@@ -9,10 +9,10 @@ main{
   position: absolute;
   bottom: 20px;
   left: 50vw;
-  margin-left: -150px;
+  margin-left: -165px;
   border-radius: 20px;
   height: 150px;
-  width: 310px;
+  width: 330px;
   background-color: #fff;
 }
 .sound{
@@ -37,7 +37,7 @@ main{
   justify-content: space-between;
 }
 button{
-  width: 130px;
+  width: 150px;
   font-family: inherit;
   cursor: pointer;
   background-color: #fff;
@@ -47,6 +47,9 @@ button{
   font-size: 18px;
   border: 1px solid rgb(158, 158, 158);
   transition: all 0.3s ease;
+}
+button:first-child{
+  margin-right: 10px;
 }
 button:hover{
   background-color: rgb(228, 228, 228);

@@ -61,8 +61,8 @@ new MTLLoader()
             function animate () {
               requestAnimationFrame(animate);
           
-              object.rotation.z += 0.02;
-              step += 0.03;
+              object.rotation.z += 0.03;
+              step += 0.04;
               object.position.y = 50 * Math.abs(Math.sin(step))
             }
             animate()
